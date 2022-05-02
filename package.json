@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Matt658041/just-tech-news/issues"
   },
-  "homepage": "https://github.com/Matt658041/just-tech-news#readme"
+  "homepage": "https://github.com/Matt658041/just-tech-news#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.19.0"
+  }
 }
