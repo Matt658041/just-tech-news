@@ -10,7 +10,7 @@ const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-  secret: 'DB_PW',
+  secret: 'Super secret secret',
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -21,7 +21,9 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create({});
+const helpers = require('./utils/helpers');
+
+const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
